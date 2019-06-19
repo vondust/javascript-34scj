@@ -227,5 +227,16 @@
         text: 'Thumbnail'
       });
     </script>
+    <script>
+      function reqListener() {
+        this.responseText;
+        console.log(this.responseText);
+      }
+
+      var oReq = new XMLHttpRequest();
+      oReq.onload = reqListener;
+      oReq.open("GET", "https://5d04064fd1471e00149bb174.mockapi.io/api/v1/blogs", true);
+      oReq.send();
+    </script>
   </body>
 </html>
